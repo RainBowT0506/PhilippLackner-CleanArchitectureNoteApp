@@ -1,4 +1,4 @@
-package com.rainbowt.philipplackner_cleanarchitecturenoteapp
+package com.rainbowt.philipplackner_cleanarchitecturenoteapp.feature_note.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
