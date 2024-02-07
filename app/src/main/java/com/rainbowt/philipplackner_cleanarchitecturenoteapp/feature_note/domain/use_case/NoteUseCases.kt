@@ -2,6 +2,7 @@ package com.rainbowt.philipplackner_cleanarchitecturenoteapp.feature_note.domain
 
 data class NoteUseCases(
     val getNotes: GetNotes,
-    val deleteNote: DeleteNote
+    val deleteNote: DeleteNote,
+    val addNote: AddNote
 ) {
 }
