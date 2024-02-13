@@ -20,7 +20,7 @@ import com.rainbowt.philipplackner_cleanarchitecturenoteapp.feature_note.present
 import com.rainbowt.philipplackner_cleanarchitecturenoteapp.feature_note.presentation.util.Screen
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalAnimationApi::class)
+@ExperimentalAnimationApi
 @Composable
 fun NotesScreen(
     navController: NavController,
