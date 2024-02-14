@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
@@ -40,7 +41,7 @@ fun NotesScreen(
                 },
                 backgroundColor = MaterialTheme.colors.primary
             ) {
-
+                Icon(imageVector = Icons.Default.Add, contentDescription = "Add")
             }
         },
         scaffoldState = scaffoldState
@@ -80,8 +81,7 @@ fun NotesScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(vertical = 16.dp)
-                        .testTag(ORDER_SECTION)
-                    ,
+                        .testTag(ORDER_SECTION),
                     noteOrder = state.noteOrder,
                     onOrderChange = {
                         viewModel.onEvent(NotesEvent.Order(it))
@@ -94,12 +94,14 @@ fun NotesScreen(
                 items(state.notes) { note ->
                     NoteItem(
                         note = note,
-                        modifier = Modifier.fillMaxWidth().clickable {
-                            navController.navigate(
-                                Screen.AddEditNoteScreen.route +
-                                        "?noteId=${note.id}&noteColor=${note.color}"
-                            )
-                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable {
+                                navController.navigate(
+                                    Screen.AddEditNoteScreen.route +
+                                            "?noteId=${note.id}&noteColor=${note.color}"
+                                )
+                            },
                         onDeleteClick = {
                             viewModel.onEvent(NotesEvent.DeleteNote(note))
                             scope.launch {
