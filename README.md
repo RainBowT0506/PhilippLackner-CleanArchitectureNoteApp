@@ -33,7 +33,7 @@ Github：[PhilippLackner-CleanArchitectureNoteApp](https://github.com/RainBowT05
 - 觀眾可以透過影片瞭解到乾淨架構的理論概念，若有興趣可以訂閱免費的電子報以獲得更多相關建議與資訊。 
 
 # Setting up the project structure
-![image](https://hackmd.io/_uploads/B1--zsnqp.png)
+![image](https://github.com/RainBowT0506/PhilippLackner-CleanArchitectureNoteApp/assets/109667537/0cb1596f-7f7d-49c3-aef8-1e87e402cdf7)
 
 ## 概念解釋
 - 在開始之前，需要先下載初始專案，該專案包含了所有預設的樣式、依賴與專案結構。
